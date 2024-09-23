@@ -9,23 +9,23 @@ profile:
   name: qodana.recommended
 
 #Enable inspections
-#include:
-#  - name: <SomeEnabledInspectionId>
+include:
+  - name: <SomeEnabledInspectionId>
 
-#Disable inspections
-#exclude:
-#  - name: <SomeDisabledInspectionId>
-#    paths:
-#      - <path/where/not/run/inspection>
+Disable inspections
+exclude:
+ - name: <SomeDisabledInspectionId>
+    paths:
+      - <path/where/not/run/inspection>
 
 projectJDK: 21 #(Applied in CI/CD pipeline)
 
 #Execute shell command before Qodana execution (Applied in CI/CD pipeline)
-#bootstrap: sh ./prepare-qodana.sh
+bootstrap: sh ./prepare-qodana.sh
 
 #Install IDE plugins before Qodana execution (Applied in CI/CD pipeline)
 #plugins:
-#  - id: <plugin.id> #(plugin id can be found at https://plugins.jetbrains.com)
+  - id: <plugin.id> #(plugin id can be found at https://plugins.jetbrains.com)
 
 #Specify Qodana linter for analysis (Applied in CI/CD pipeline)
 linter: jetbrains/qodana-jvm:latest
